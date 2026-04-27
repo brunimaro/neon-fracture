@@ -1215,6 +1215,7 @@
 <div class="scanlines"></div>
 <div class="noise"></div>
 
+<div data-scroll-container>
 <!-- NAV -->
 <nav>
   <div class="nav-logo">NEON<span>_</span>FRACTURE</div>
@@ -1657,16 +1658,16 @@
 
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 <script>
-// CUSTOM CURSOR — injectés sur <html> pour échapper à tout filter/transform de <body>
+// CUSTOM CURSOR — injectés sur <body> pour éviter les conflits avec LocomotiveScroll
 const cursor = document.createElement('div');
 cursor.id = 'cursor';
 cursor.className = 'cursor';
-document.documentElement.appendChild(cursor);
+document.body.appendChild(cursor);
 
 const ring = document.createElement('div');
 ring.id = 'cursorRing';
 ring.className = 'cursor-ring';
-document.documentElement.appendChild(ring);
+document.body.appendChild(ring);
 
 let mx = 0, my = 0, rx = 0, ry = 0;
 
@@ -1812,5 +1813,6 @@ if (eyebrow) {
   }, 500);
 }
 </script>
+</div>
 </body>
 </html>
