@@ -15,7 +15,7 @@
 
 Aucun framework. Aucune dépendance lourde. Un seul fichier HTML.
 
-https://brunimaro.github.io/neon-fracture/
+<a href="[http://example.com/](https://brunimaro.github.io/neon-fracture/)" target="_blank">Voir le site en demo</a>
 
 ---
 
