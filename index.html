@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 <style>
   :root {
     --neon-cyan: #00f5ff;
@@ -862,7 +863,8 @@
     aspect-ratio: 16/9;
     border: 1px solid rgba(0,245,255,0.15);
     overflow: hidden;
-    background: #000;
+    background: url(/trailer.png) center center no-repeat  #000;
+    background-size: cover
   }
   .trailer-frame::before {
     content: '';
@@ -1592,7 +1594,7 @@
       <div class="trailer-corner tr"></div>
       <div class="trailer-corner bl"></div>
       <div class="trailer-corner br"></div>
-      <div class="play-btn"></div>
+      <a class="play-btn" data-fancybox data-src="https://youtu.be/zW-p-kbbI5c" href="javascript:;"></a>
       <div class="trailer-label">NEON_FRACTURE — OFFICIAL CINEMATIC — 2087 // 4K</div>
       <!-- Decorative lines inside trailer -->
       <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.2" viewBox="0 0 900 506" fill="none" preserveAspectRatio="xMidYMid slice">
@@ -1812,6 +1814,12 @@ if (eyebrow) {
     }, 40);
   }, 500);
 }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+  Fancybox.bind('[data-fancybox]', {
+    // Options pour la modale vidéo
+  });
 </script>
 </div>
 </body>
